@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>QR Мени</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;0.5&isplay=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,10 +35,6 @@
 
 <!-- ================= HOME VIEW ================= -->
 <section id="home">
-
-    
-</div>
-
     <!-- Category Grid -->
     <div class="categories-grid">
 
@@ -77,6 +74,13 @@
             <div class="category-title">Вино</div>
         </div>
 
+        <div class="category-card-square" onclick="openCategory('Pivo')">
+            <div class="category-image">
+                <img src="images/Pivo.png" alt="Pivo">
+            </div>
+            <div class="category-title">Пиво</div>
+        </div>
+
         <div class="category-card-square" onclick="openCategory('alkoholni')">
             <div class="category-image">
                 <img src="images/alkohol.png" alt="Алкохолни пијалоци">
@@ -107,8 +111,10 @@
 <!-- CATEGORY: TOPLI NAPITOCI START -->
 <section class="category" id="topli-napitoci">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Топли напитоци</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Топли напитоци</h2>
+    </div>
 
     <!-- DRINK ITEM -->
     <div class="drink">
@@ -285,8 +291,10 @@
 <!-- CATEGORY: ENERGETSKI PIJALACI START -->
 <section class="category" id="energetski">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Енергетски пијалоци</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Енергетски пијалоци</h2>
+    </div>
 
     <div class="drink">
         <span class="drink-name">Red Bull</span>
@@ -304,8 +312,10 @@
 <!-- CATEGORY: BEZALKOHOLNI START -->
 <section class="category" id="bezalkoholni">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Безалкохолни пијалоци</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Безалкохолни пијалоци</h2>
+    </div>
 
     <div class="drink">
         <span class="drink-name">Pepsi</span>
@@ -393,8 +403,10 @@
 <!-- CATEGORY: OSVEZITELNI START -->
 <section class="category" id="osvezitelni">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Освежителни пијалоци</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Освежителни пијалоци</h2>
+    </div>
 
     <div class="drink">
         <span class="drink-name">Monin</span>
@@ -424,8 +436,10 @@
 <!-- CATEGORY: VINO START -->
 <section class="category" id="vino">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Вино</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Вино</h2>
+    </div>
         <div class="drink-section-header">Големи шишиња 0,75</div>
 
         <div class="drink">
@@ -523,17 +537,17 @@
 <!-- CATEGORY: ALKOHOLNI START -->
 <section class="category" id="alkoholni">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Алкохолни пијалоци</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Алкохолни пијалоци</h2>
+    </div>
 
     <!-- SUBCATEGORY CARDS -->
     <div class="subcategories-grid">
         <div class="subcategory-card card" id="card-gin" onclick="openCategory('alkoholni-gin')">
             <span>Џин</span>
         </div>
-        <div class="subcategory-card card" id="card-beer" onclick="openCategory('alkoholni-beer')">
-            <span>Пиво</span>
-        </div>
+    
         <div class="subcategory-card card" id="card-whiskey" onclick="openCategory('alkoholni-whiskey')">
             <span>Виски</span>
         </div>
@@ -573,166 +587,122 @@
 
 <!-- CATEGORY: GIN -->
 <section class="category" id="alkoholni-gin">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Џин</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Џин</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Sax Gin</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Sax Pink Gin</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Gordons Gin</span>
-        <span class="price">130 ден | 40 ml</span>
+        <span class="price">130 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Gordons Pink Gin</span>
-        <span class="price">130 ден | 40 ml</span>
+        <span class="price">130 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Bombay Gin</span>
-        <span class="price">150 ден | 40 ml</span>
+        <span class="price">150 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Beefeater Gin</span>
-        <span class="price">130 ден | 40 ml</span>
+        <span class="price">130 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Broker's Gin</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Smidgin Gin</span>
-        <span class="price">230 ден | 40 ml</span>
+        <span class="price">230 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Tanqueray Gin</span>
-        <span class="price">200 ден | 40 ml</span>
+        <span class="price">200 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Hendricks Gin</span>
-        <span class="price">280 ден | 40 ml</span>
+        <span class="price">280 ден | 0.04 l</span>
     </div>
 
      <div class="drink">
         <span class="drink-name">Bulldog Gin</span>
-        <span class="price">220 ден | 40 ml</span>
+        <span class="price">220 ден | 0.04 l</span>
     </div>
 </section>
 
-<!-- CATEGORY: BEER -->
-<section class="category" id="alkoholni-beer">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Пиво</h2>
-    <div class="drink">
-        <span class="drink-name">Zlaten Dab</span>
-        <span class="price">110 ден | 330 ml / 500 ml</span>
-    </div>
 
-    <div class="drink">
-        <span class="drink-name">Zlaten Dab Temno</span>
-        <span class="price">110 ден | 330 ml</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Krali Marko</span>
-        <span class="price">100 ден | 500 ml</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Tuborg</span>
-        <span class="price">130 ден | 330 ml</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Tuborg Ice</span>
-        <span class="price">130 ден | 330 ml</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Tuborg Безалкохолно</span>
-        <span class="price">130 ден | 500 ml</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Carlsberg</span>
-        <span class="price">170 ден | 330 ml</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Zlaten Dab Amber</span>
-        <span class="price">110 ден | 330 ml / 500 ml </span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Zlaten Dab Точено</span>
-        <span class="price">80 ден | 330 ml / 100 ден | 400 ml</span>
-    </div>
-</section>
 
 <!-- CATEGORY: WHISKEY -->
 <section class="category" id="alkoholni-whiskey">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Виски</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Виски</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Johnnie Walker Red</span>
-        <span class="price">170 ден | 40 ml</span>
+        <span class="price">170 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Clan Campbell Whisky</span>
-        <span class="price">130 ден | 40 ml</span>
+        <span class="price">130 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Jameson</span>
-        <span class="price">170 ден | 40 ml</span>
+        <span class="price">170 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Jim Beam</span>
-        <span class="price">150 ден | 40 ml</span>
+        <span class="price">150 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Proper No. Twelve</span>
-        <span class="price">280 ден | 40 ml</span>
+        <span class="price">280 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Southern Comfort</span>
-        <span class="price">160 ден | 40 ml</span>
+        <span class="price">160 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Bushmills</span>
-        <span class="price">160 ден | 40 ml</span>
+        <span class="price">160 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Jack Daniels</span>
-        <span class="price">200 ден | 40 ml</span>
+        <span class="price">200 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">The Famous Grouse</span>
-        <span class="price">160 ден | 40 ml</span>
+        <span class="price">160 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Gentleman Jack</span>
-        <span class="price">350 ден | 40 ml</span>
+        <span class="price">350 ден | 0.04 l</span>
     </div>
 
    
@@ -740,201 +710,274 @@
 
 <!-- CATEGORY: RUM -->
 <section class="category" id="alkoholni-rum">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Рум</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Рум</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Badel</span>
-        <span class="price">90 ден | 40 ml</span>
+        <span class="price">90 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Bacardi</span>
-        <span class="price">130 ден | 40 ml</span>
+        <span class="price">130 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Captain Morgan Gold / Black</span>
-        <span class="price">120 ден / 130 ден | 40 ml</span>
+        <span class="price">120 ден / 130 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: VODKA -->
 <section class="category" id="alkoholni-vodka">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Вотка</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Вотка</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Vigor</span>
-        <span class="price">90 ден | 40 ml</span>
+        <span class="price">90 ден | 0.04 l</span>
     </div>
 
 
     <div class="drink">
         <span class="drink-name">Absolut</span>
-        <span class="price">120 ден | 40 ml</span>
+        <span class="price">120 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Finlandia</span>
-        <span class="price">120 ден | 40 ml</span>
+        <span class="price">120 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Smirnoff</span>
-        <span class="price">110 ден | 40 ml</span>
+        <span class="price">110 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: BRANDY -->
 <section class="category" id="alkoholni-brandy">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Бренди</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Бренди</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Badel</span>
-        <span class="price">80 ден | 40 ml</span>
+        <span class="price">80 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Badel Dark</span>
-        <span class="price">110 ден | 40 ml</span>
+        <span class="price">110 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: TEQUILA -->
 <section class="category" id="alkoholni-tequila">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Текила</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Текила</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Tres Sombreros Silver</span>
-        <span class="price">80 ден | 40 ml</span>
+        <span class="price">80 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: LIQUEUR -->
 <section class="category" id="alkoholni-liqueur">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Ликер</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Ликер</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Pelinkovac</span>
-        <span class="price">80 ден | 40 ml</span>
+        <span class="price">80 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Jägermeister</span>
-        <span class="price">130 ден | 40 ml</span>
+        <span class="price">130 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Calhua</span>
-        <span class="price">90 ден | 40 ml</span>
+        <span class="price">90 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Archers</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Baileys</span>
-        <span class="price">150 ден | 40 ml</span>
+        <span class="price">150 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Malibu</span>
-        <span class="price">120 ден | 40 ml</span>
+        <span class="price">120 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Absinthe</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: STOCK -->
 <section class="category" id="alkoholni-stock">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Шток</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Шток</h2>
+    </div>
      <div class="drink">
         <span class="drink-name">Шток</span>
-        <span class="price">110 ден | 40 ml</span>
+        <span class="price">110 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: UZO -->
 <section class="category" id="alkoholni-Uzo">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Узо</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Узо</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Узо Плумари</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
      <div class="drink">
         <span class="drink-name">Узо Магија</span>
-        <span class="price">80 ден | 40 ml</span>
+        <span class="price">80 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: CUSTOM 11 -->
 <section class="category" id="alkoholni-category11">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Вермут</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Вермут</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Martini Bianco</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Martini Rosso</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Campari</span>
-        <span class="price">130 ден | 40 ml</span>
+        <span class="price">130 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Aperol</span>
-        <span class="price">120 ден | 40 ml</span>
+        <span class="price">120 ден | 0.04 l</span>
     </div>
 </section>
 
 <!-- CATEGORY: CUSTOM 12 -->
 <section class="category" id="alkoholni-category12">
-    <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
-    <h2>Ракија</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="openCategory('alkoholni')">← Назад</button>
+        <h2>Ракија</h2>
+    </div>
     <div class="drink">
         <span class="drink-name">Жолта</span>
-        <span class="price">80 ден | 40 ml</span>
+        <span class="price">80 ден | 0.04 l</span>
     </div>
 
     
     <div class="drink">
         <span class="drink-name">РАКИЈА ЅВОНЧАР</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">РАКИЈА АЗБУКА</span>
-        <span class="price">100 ден | 40 ml</span>
+        <span class="price">100 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">РАКИЈА БОВИН</span>
-        <span class="price">80 ден | 40 ml</span>
+        <span class="price">80 ден | 0.04 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">ГРЕЕНА РАКИЈА (Греана)</span>
-        <span class="price">70 ден | 40 ml</span>
+        <span class="price">70 ден | 0.04 l</span>
     </div>
+</section>
+
+<section class="category" id="Pivo">
+
+    
+     <button class="back-btn" onclick="goBack()">← Назад</button>
+    <h2>Пиво</h2>
+    <div class="drink">
+        <span class="drink-name">Zlaten Dab</span>
+        <span class="price">110 ден | 0,33 l / 0,5 l</span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Zlaten Dab Temno</span>
+        <span class="price">110 ден | 0,33 l</span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Krali Marko</span>
+        <span class="price">100 ден | 0,5 l</span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Tuborg</span>
+        <span class="price">130 ден | 0.33 l</span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Tuborg Ice</span>
+        <span class="price">130 ден | 0.33 l</span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Tuborg Безалкохолно</span>
+        <span class="price">130 ден | 0.5 l</span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Carlsberg</span>
+        <span class="price">170 ден | 0.33 l</span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Zlaten Dab Amber</span>
+        <span class="price">110 ден | 0.33 l / 0.5 l </span>
+    </div>
+
+    <div class="drink">
+        <span class="drink-name">Zlaten Dab Точено</span>
+        <span class="price">80 ден | 0.33 l / 100 ден | 0.4 l</span>
+    </div>
+</section>
+
 </section>
 
 <!-- CATEGORY: KOKTELI START -->
 <section class="category" id="kokteli">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Коктел мени</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Коктел мени</h2>
+    </div>
 
     <!-- SHOTS -->
     <div class="drink-section-header">Shots</div>
@@ -1103,8 +1146,10 @@
 <!-- CATEGORY: PAKETI START -->
 <section class="category" id="paketi">
 
-    <button class="back-btn" onclick="goBack()">← Назад</button>
-    <h2>Пакети</h2>
+    <div class="category-header-fixed">
+        <button class="back-btn" onclick="goBack()">← Назад</button>
+        <h2>Пакети</h2>
+    </div>
 
     <div class="drink">
         <span class="drink-name">Пакет Кафе Сок од Калинка</span>

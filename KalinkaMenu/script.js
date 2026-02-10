@@ -1,54 +1,80 @@
-// Open selected category
-function openCategory(id) {
-    document.getElementById('home').style.display = 'none';
+// Cache header element for better performance
+let cachedHeader = null;
 
+function getHeader() {
+    if (!cachedHeader) {
+        cachedHeader = document.querySelector('.sticky-header');
+    }
+    return cachedHeader;
+}
+
+// Handle showing/hiding categories based on URL hash
+function handleHashChange() {
+    const hash = window.location.hash.slice(1); // Remove the # prefix
     const categories = document.querySelectorAll('.category');
+    const home = document.getElementById('home');
+    
+    if (!home) return; // Safety check
+    
+    // Hide all categories first
     categories.forEach(cat => cat.style.display = 'none');
+    
+    if (hash === '' || hash === 'home') {
+        // Show home
+        home.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    } else {
+        // Show the category that matches the hash
+        const categoryEl = document.getElementById(hash);
+        if (categoryEl) {
+            home.style.display = 'none';
+            categoryEl.style.display = 'block';
+            scrollToElement(categoryEl);
+        } else {
+            // If hash doesn't match any category, show home
+            home.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+    }
+}
 
-    const el = document.getElementById(id);
-    el.style.display = 'block';
-
-    // Ensure the viewport shows the top of the opened category
-    // taking the sticky header into account, and move keyboard focus.
-    const header = document.querySelector('.sticky-header');
+// Scroll to a specific element, accounting for the sticky header
+function scrollToElement(el) {
+    const header = getHeader();
     const headerHeight = header ? header.getBoundingClientRect().height : 0;
-
-    // Give the element a scroll margin so native scrolling aligns below header
+    
     el.style.scrollMarginTop = (headerHeight + 12) + 'px';
-
-    // Focus without causing the browser to scroll (if supported), then perform our scroll
     el.setAttribute('tabindex', '-1');
+    
     try {
         el.focus({ preventScroll: true });
     } catch (e) {
-        // older browsers may not support preventScroll
         el.focus();
     }
-
-    const y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12; // 12px gap
-    window.scrollTo({ top: Math.max(0, Math.floor(y)), behavior: 'auto' });
+    
+    // Use requestAnimationFrame for smooth rendering
+    requestAnimationFrame(() => {
+        const y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+        window.scrollTo({ top: Math.max(0, Math.floor(y)), behavior: 'auto' });
+    });
 }
 
-// Go back to home
+// Open selected category by setting URL hash
+function openCategory(id) {
+    window.location.hash = id;
+}
+
+// Go back using browser history
 function goBack() {
-    const categories = document.querySelectorAll('.category');
-    categories.forEach(cat => cat.style.display = 'none');
+    window.history.back();
+}
 
-    document.getElementById('home').style.display = 'block';
+// Listen for hash changes
+window.addEventListener('hashchange', handleHashChange);
 
-    // When returning home, scroll so top content is visible below header
-    const header = document.querySelector('.sticky-header');
-    const headerHeight = header ? header.getBoundingClientRect().height : 0;
-    const home = document.getElementById('home');
-
-    home.style.scrollMarginTop = (headerHeight + 12) + 'px';
-    home.setAttribute('tabindex', '-1');
-    try {
-        home.focus({ preventScroll: true });
-    } catch (e) {
-        home.focus();
-    }
-
-    const y = home.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
-    window.scrollTo({ top: Math.max(0, Math.floor(y)), behavior: 'auto' });
+// Initialize on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', handleHashChange);
+} else {
+    handleHashChange();
 }
