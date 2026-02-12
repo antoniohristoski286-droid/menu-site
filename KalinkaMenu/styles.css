@@ -295,9 +295,11 @@ body {
     background: linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.06) 100%);
 }
 
-.back-btn:focus {
-    outline: 2px solid rgba(212,175,55,0.24);
-    outline-offset: 3px;
+
+@media (hover: none) and (pointer: coarse) {
+    .back-btn:focus {
+        outline: none;
+    }
 }
 
 /* ========== DRINK LIST (Premium Glass Rows) ========== */
