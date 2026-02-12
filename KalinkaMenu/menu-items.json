@@ -97,5 +97,12 @@
     {"category": "Бренди", "name": "Badel", "price": "80 ден | 0.04 l"},
     {"category": "Бренди", "name": "Badel Dark", "price": "110 ден | 0.04 l"},
     {"category": "Текила", "name": "Tres Sombreros Silver", "price": "80 ден | 0.04 l"},
-    {"category": "Ликер", "name": "Pelinkovac", "price": "80 ден | 0.04 l"}
+    {"category": "Ликер", "name": "Pelinkovac", "price": "80 ден | 0.04 l"},
+    {"category": "Енергетски пијалоци", "name": "Hell", "price": 150, "currency": "ден"},
+    {"category": "Безалкохолни пијалоци", "name": "Кока-Кола", "price": 120, "currency": "ден"},
+    {"category": "Безалкохолни пијалоци", "name": "Фанта", "price": 120, "currency": "ден"},
+    {"category": "Освежителни пијалоци", "name": "Лимонада", "price": 140, "currency": "ден"},
+    {"category": "Вино", "name": "Црвено вино (чаша)", "price": 150, "currency": "ден"},
+    {"category": "Алкохолни пијалоци", "name": "Водка", "price": 140, "currency": "ден"},
+    {"category": "Коктел мени", "name": "Mojito", "price": 250, "currency": "ден"}
 ]
