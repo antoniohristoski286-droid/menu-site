@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     background-color: #121212;
@@ -248,7 +252,6 @@ body {
     contain: layout style;
     background: linear-gradient(135deg, rgba(20,15,10,0.98) 0%, rgba(30,20,15,0.95) 100%);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(212,175,55,0.16);
     box-shadow: 0 8px 24px rgba(0,0,0,0.5);
     padding: 18px 24px 12px 24px;
     z-index: 101;
