@@ -7,7 +7,7 @@
     <title>QR Мени</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;0.5&isplay=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -41,66 +41,61 @@
         <!-- CATEGORY CARD -->
         <div class="category-card-square" onclick="openCategory('topli-napitoci')">
             <div class="category-image">
-                <img src="images/t_napitoci.jpg" alt="Топли напитоци">
+                <img src="images/t_napitoci.jpg" alt="Топли напитоци" loading="lazy">
             </div>
             <div class="category-title">Топли напитоци</div>
         </div>
 
         <div class="category-card-square" onclick="openCategory('energetski')">
             <div class="category-image">
-                <img src="images/e_pijalaci.png" alt="Енергетски пијалоци">
+                <img src="images/e_pijalaci.png" alt="Енергетски пијалоци" loading="lazy">
             </div>
             <div class="category-title">Енергетски пијалоци</div>
         </div>
 
         <div class="category-card-square" onclick="openCategory('bezalkoholni')">
             <div class="category-image">
-                <img src="images/b_pijaloci.png" alt="Безалкохолни пијалоци">
+                <img src="images/b_pijaloci.png" alt="Безалкохолни пијалоци" loading="lazy">
             </div>
             <div class="category-title">Безалкохолни пијалоци</div>
         </div>
 
         <div class="category-card-square" onclick="openCategory('osvezitelni')">
             <div class="category-image">
-                <img src="images/o_pijalaci.png" alt="Освежителни пијалоци">
+                <img src="images/o_pijalaci.png" alt="Освежителни пијалоци" loading="lazy">
             </div>
             <div class="category-title">Освежителни пијалоци</div>
         </div>
 
         <div class="category-card-square" onclick="openCategory('vino')">
             <div class="category-image">
-                <img src="images/Vino.jpg" alt="Вино">
+                <img src="images/Vino.jpg" alt="Вино" loading="lazy">
             </div>
             <div class="category-title">Вино</div>
         </div>
 
-        <div class="category-card-square" onclick="openCategory('Pivo')">
+        <div class="category-card-square" onclick="openCategory('pivo')">
             <div class="category-image">
-                <img src="images/Pivo.png" alt="Pivo">
+                <img src="images/Pivo.png" alt="Пиво" loading="lazy">
             </div>
             <div class="category-title">Пиво</div>
         </div>
 
         <div class="category-card-square" onclick="openCategory('alkoholni')">
             <div class="category-image">
-                <img src="images/alkohol.png" alt="Алкохолни пијалоци">
+                <img src="images/alkohol.png" alt="Алкохолни пијалоци" loading="lazy">
             </div>
             <div class="category-title">Алкохолни пијалоци</div>
         </div>
 
         <div class="category-card-square" onclick="openCategory('kokteli')">
             <div class="category-image">
-                <img src="images/Kokteli.png" alt="Коктел мени">
+                <img src="images/Kokteli.png" alt="Коктел мени" loading="lazy">
             </div>
             <div class="category-title">Коктел мени</div>
         </div>
 
-          <div class="category-card-square" onclick="openCategory('paketi')">
-            <div class="category-image">
-                <img src="images/Paketi.jpg" alt="Пакети">
-            </div>
-            <div class="category-title">Пакети</div>
-        </div>
+          
 
     </div>
 </section>
@@ -134,12 +129,12 @@
     </div>
 
     <div class="drink">
-    <div class="drink-info">
-        <span class="drink-name">Макијато Монин</span>
-        <span class="drink-description">макијато со арoматизиран Monin сируп</span>
+        <div class="drink-info">
+            <span class="drink-name">Макијато Монин</span>
+            <span class="drink-description">макијато со ароматизиран Monin сируп</span>
+        </div>
+        <span class="price">100 ден</span>
     </div>
-    <span class="price">100 ден</span>
-</div>
 
 
     <div class="drink">
@@ -148,12 +143,12 @@
     </div>
 
     <div class="drink">
-    <div class="drink-info">
-        <span class="drink-name">Капучино Монин</span>
-        <span class="drink-description">Капучино со Monin сируп по избор</span>
+        <div class="drink-info">
+            <span class="drink-name">Капучино Монин</span>
+            <span class="drink-description">Капучино со Monin сируп по избор</span>
+        </div>
+        <span class="price">100 ден</span>
     </div>
-    <span class="price">100 ден</span>
-</div>
 
     <div class="drink">
         <span class="drink-name">Лате Макијато</span>
@@ -165,10 +160,13 @@
         <span class="price">120 ден</span>
     </div>
 
-   <div class="drink"><div class="drink-info">
-<span class="drink-name">Ирско Кафе</span>
-<span class="drink-description">кафе со ирски ликер и шлаг</span>
-</div><span class="price">140 ден</span></div>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Ирско Кафе</span>
+            <span class="drink-description">кафе со ирски ликер и шлаг</span>
+        </div>
+        <span class="price">140 ден</span>
+    </div>
 
     <div class="drink">
         <span class="drink-name">Американо</span>
@@ -180,15 +178,21 @@
         <span class="price">90 ден</span>
     </div>
 
-   <div class="drink"><div class="drink-info">
-<span class="drink-name">Нескафе со Вкус</span>
-<span class="drink-description">Ванила, Ирско, Лешник, Чоколадо</span>
-</div><span class="price">100 ден</span></div>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Нескафе со Вкус</span>
+            <span class="drink-description">Ванила, Ирско, Лешник, Чоколадо</span>
+        </div>
+        <span class="price">100 ден</span>
+    </div>
 
-    <div class="drink"><div class="drink-info">
-<span class="drink-name">Нескафе Монин</span>
-<span class="drink-description">нескафе со Monin сируп</span>
-</div><span class="price">100 ден</span></div>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Нескафе Монин</span>
+            <span class="drink-description">нескафе со Monin сируп</span>
+        </div>
+        <span class="price">100 ден</span>
+    </div>
 
     <div class="drink">
         <span class="drink-name">Фредо Еспресо</span>
@@ -210,20 +214,21 @@
         <span class="price">70 ден</span>
     </div>
 
-  <div class="drink">
-    <div class="drink-info">
-        <span class="drink-name">Топло Чоколадо</span>
-        <span class="drink-description">
-            Темно, Бело, Банана, Кокос.<br>
-        </span>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Топло Чоколадо</span>
+            <span class="drink-description">Темно, Бело, Банана, Кокос</span>
+        </div>
+        <span class="price">100 ден / Плазма 120 ден</span>
     </div>
-    <span class="price">100 ден / Плазма 120 ден</span>
-</div>
 
-  <div class="drink"><div class="drink-info">
-<span class="drink-name">Милкшејк</span>
-<span class="drink-description">Ванила, Чоколадо, Јагода</span>
-</div><span class="price">120 ден</span></div>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Милкшејк</span>
+            <span class="drink-description">Ванила, Чоколадо, Јагода</span>
+        </div>
+        <span class="price">120 ден</span>
+    </div>
 
     <div class="drink">
         <span class="drink-name">Какао</span>
@@ -265,20 +270,29 @@
         <span class="price">110 ден</span>
     </div>
 
-    <div class="drink"><div class="drink-info">
-<span class="drink-name">Еспресо Бајадера Ликер</span>
-<span class="drink-description">Еспресо со Бајадера ликер</span>
-</div><span class="price">140 ден</span></div>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Еспресо Бајадера Ликер</span>
+            <span class="drink-description">Еспресо со Бајадера ликер</span>
+        </div>
+        <span class="price">140 ден</span>
+    </div>
 
-   <div class="drink"><div class="drink-info">
-<span class="drink-name">Макијато Бајадера Ликер</span>
-<span class="drink-description">Макијато со Бајадера ликер</span>
-</div><span class="price">140 ден</span></div>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Макијато Бајадера Ликер</span>
+            <span class="drink-description">Макијато со Бајадера ликер</span>
+        </div>
+        <span class="price">140 ден</span>
+    </div>
 
-    <div class="drink"><div class="drink-info">
-<span class="drink-name">Нескафе Бајадера Ликер</span>
-<span class="drink-description">Нескафе со Бајадера ликер</span>
-</div><span class="price">140 ден</span></div>
+    <div class="drink">
+        <div class="drink-info">
+            <span class="drink-name">Нескафе Бајадера Ликер</span>
+            <span class="drink-description">Нескафе со Бајадера ликер</span>
+        </div>
+        <span class="price">140 ден</span>
+    </div>
 
     
 
@@ -569,13 +583,13 @@
         <div class="subcategory-card card" id="card-stock" onclick="openCategory('alkoholni-stock')">
             <span>Шток</span>
         </div>
-        <div class="subcategory-card card" id="card-ouzo" onclick="openCategory('alkoholni-Uzo')">
+        <div class="subcategory-card card" id="card-ouzo" onclick="openCategory('alkoholni-uzo')">
             <span>Узо</span>
         </div>
-        <div class="subcategory-card card" id="card-vermouth" onclick="openCategory('alkoholni-category11')">
+        <div class="subcategory-card card" id="card-vermouth" onclick="openCategory('alkoholni-vermut')">
             <span>Вермут</span>
         </div>
-        <div class="subcategory-card card" id="card-rakija" onclick="openCategory('alkoholni-category12')">
+        <div class="subcategory-card card" id="card-rakija" onclick="openCategory('alkoholni-rakija')">
             <span>Ракија</span>
         </div>
     </div>
@@ -842,7 +856,7 @@
 </section>
 
 <!-- CATEGORY: UZO -->
-<section class="category" id="alkoholni-Uzo">
+<section class="category" id="alkoholni-uzo">
     <div class="category-header-fixed">
         <button class="back-btn" onclick="goBack()">← Назад</button>
         <h2>Узо</h2>
@@ -859,7 +873,7 @@
 </section>
 
 <!-- CATEGORY: CUSTOM 11 -->
-<section class="category" id="alkoholni-category11">
+<section class="category" id="alkoholni-vermut">
     <div class="category-header-fixed">
         <button class="back-btn" onclick="goBack()">← Назад</button>
         <h2>Вермут</h2>
@@ -886,7 +900,7 @@
 </section>
 
 <!-- CATEGORY: CUSTOM 12 -->
-<section class="category" id="alkoholni-category12">
+<section class="category" id="alkoholni-rakija">
     <div class="category-header-fixed">
         <button class="back-btn" onclick="goBack()">← Назад</button>
         <h2>Ракија</h2>
@@ -918,7 +932,7 @@
     </div>
 </section>
 
-<section class="category" id="Pivo">
+<section class="category" id="pivo">
 
     <div class="category-header-fixed">
         <button class="back-btn" onclick="goBack()">← Назад</button>
@@ -941,35 +955,33 @@
 
     <div class="drink">
         <span class="drink-name">Tuborg</span>
-        <span class="price">130 ден | 0.33 l</span>
+        <span class="price">130 ден | 0,33 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Tuborg Ice</span>
-        <span class="price">130 ден | 0.33 l</span>
+        <span class="price">130 ден | 0,33 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Tuborg Безалкохолно</span>
-        <span class="price">130 ден | 0.5 l</span>
+        <span class="price">130 ден | 0,5 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Carlsberg</span>
-        <span class="price">170 ден | 0.33 l</span>
+        <span class="price">170 ден | 0,33 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Zlaten Dab Amber</span>
-        <span class="price">110 ден | 0.33 l / 0.5 l </span>
+        <span class="price">110 ден | 0,33 l / 0,5 l</span>
     </div>
 
     <div class="drink">
         <span class="drink-name">Zlaten Dab Точено</span>
-        <span class="price">80 ден | 0.33 l / 100 ден | 0.4 l</span>
+        <span class="price">80 ден | 0,33 l / 100 ден | 0,4 l</span>
     </div>
-</section>
-
 </section>
 
 <!-- CATEGORY: KOKTELI START -->
@@ -1144,51 +1156,7 @@
 </section>
 <!-- CATEGORY: KOKTELI END -->
 
-<!-- CATEGORY: PAKETI START -->
-<section class="category" id="paketi">
 
-    <div class="category-header-fixed">
-        <button class="back-btn" onclick="goBack()">← Назад</button>
-        <h2>Пакети</h2>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Пакет Кафе - Сок од Калинка</span>
-        <span class="price">110 ден</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Пакет Кафе - Цевитана</span>
-        <span class="price">80 ден</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Пакет Кафе - Добра Вода</span>
-        <span class="price">100 ден</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Пакет Кафе - Газоза</span>
-        <span class="price">110 ден</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Пакет Нескафе - Књаз</span>
-        <span class="price">120 ден</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Пакет Какао - Пепси</span>
-        <span class="price">120 ден</span>
-    </div>
-
-    <div class="drink">
-        <span class="drink-name">Пакет Топло Чоколадо - Цевитана</span>
-        <span class="price">120 ден</span>
-    </div>
-
-</section>
-<!-- CATEGORY: PAKETI END -->
 
 <!-- SOCIALS FOOTER -->
 <footer class="socials-footer">
